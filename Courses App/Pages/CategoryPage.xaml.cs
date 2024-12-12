@@ -43,7 +43,7 @@ public partial class CategoryPage : ContentPage
 
     private async void OnUpdateSelectedCategory(object sender, EventArgs e)
     {
-        var selectedCategory = CategoriesListView.SelectedItem as CategoryWithSelection;
+        var selectedCategory = _categories.FirstOrDefault(c => c.IsSelected);
 
         if (selectedCategory != null)
         {
@@ -58,7 +58,7 @@ public partial class CategoryPage : ContentPage
 
     private void OnCategorySelected(object sender, SelectedItemChangedEventArgs e)
     {
-        var selectedCategory = e.SelectedItem as CategoryWithSelection;
+        var selectedCategory = _categories.FirstOrDefault(c => c.IsSelected);
 
         if (selectedCategory != null)
         {

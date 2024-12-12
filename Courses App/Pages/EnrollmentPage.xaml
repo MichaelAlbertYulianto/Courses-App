@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Courses_App.Pages.EnrollmentPage"
+             Title="EnrollmentPage">
+    <VerticalStackLayout Padding="10">
+        <Label Text="Enrollment Details" FontSize="24" HorizontalOptions="Center" />
+        <CollectionView x:Name="EnrollmentList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding EnrollmentId}" />
+                        <Label Text="{Binding InstructorId}" />
+                        <Label Text="{Binding CourseId}" />
+                        <Label Text="{Binding EnrolledAt}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Refresh" Clicked="OnRefreshClicked" />
+        <Button Text="Update" Clicked="OnUpdateClicked" />
+        <Button Text="Delete" Clicked="OnDeleteClicked" />
+    </VerticalStackLayout>
+</ContentPage>

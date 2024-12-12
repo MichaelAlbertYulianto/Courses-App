@@ -9,11 +9,11 @@
     Shell.FlyoutBehavior="Flyout"
     Title="Courses_App">
 
-    <FlyoutItem Title="Courses" Icon="course_icon.png">
+    <FlyoutItem Title="Courses" Icon="https://tl.vhv.rs/dpng/s/325-3251170_courses-icon-black-and-white-png-download-study.png">
         <ShellContent Route="CoursePage" ContentTemplate="{DataTemplate local:CoursePage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Categories" Icon="category_icon.png">
+    <FlyoutItem Title="Categories" Icon="https://img.favpng.com/9/20/2/categories-icon-configuration-icon-document-icon-png-favpng-08ksTSTWmWu1hwYrd3MPLUf8L.jpg">
         <ShellContent Route="CategoryPage" ContentTemplate="{DataTemplate local:CategoryPage}" />
     </FlyoutItem>
 
