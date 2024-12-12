@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Courses_App.Pages.EditCourse"
+             Title="EditCourse">
+    <StackLayout Padding="10">
+        <Label Text="Course Name" />
+        <Entry x:Name="CourseNameEntry" />
+
+        <Label Text="Description" />
+        <Editor x:Name="CourseDescriptionEditor" HeightRequest="100" />
+
+        <Label Text="Image Name" />
+        <Entry x:Name="CourseImageNameEntry" />
+
+        <Label Text="Duration" />
+        <Entry x:Name="CourseDurationEntry" Keyboard="Numeric" />
+
+        <Label Text="Category" />
+        <Picker x:Name="CourseCategoryPicker" />
+
+        <Button Text="Save Changes" Clicked="OnSaveChanges" />
+    </StackLayout>
+</ContentPage>

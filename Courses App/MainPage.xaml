@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Courses_App.MainPage">
+
+    <StackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+        <Label Text="Welcome to Courses App" 
+               FontSize="24" 
+               HorizontalOptions="Center" 
+               TextColor="DarkBlue" />
+
+        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10">
+            <StackLayout Spacing="10">
+                <Label Text="Username:" FontSize="18" />
+                <Entry x:Name="UsernameEntry" Placeholder="Enter your username" />
+
+                <Label Text="Password:" FontSize="18" />
+                <Entry x:Name="PasswordEntry" Placeholder="Enter your password" IsPassword="True" />
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Login" 
+                Clicked="OnLoginClicked" 
+                BackgroundColor="DarkBlue" 
+                TextColor="White" 
+                CornerRadius="10" 
+                Padding="10" />
+    </StackLayout>
+
+</ContentPage>

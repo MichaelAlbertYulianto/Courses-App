@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Courses_App.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Courses_App.Pages"
+    FlyoutBackground="White"
+    FlyoutIcon="flyout_black_icon.jpg"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Courses_App">
+
+    <FlyoutItem Title="Courses" Icon="course_icon.png">
+        <ShellContent Route="CoursePage" ContentTemplate="{DataTemplate local:CoursePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Categories" Icon="category_icon.png">
+        <ShellContent Route="CategoryPage" ContentTemplate="{DataTemplate local:CategoryPage}" />
+    </FlyoutItem>
+
+</Shell>

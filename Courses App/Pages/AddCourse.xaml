@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Courses_App.Pages.AddCourse"
+             Title="AddCourse">
+    <StackLayout Padding="10">
+        <Label Text="Course Name" />
+        <Entry x:Name="CourseNameEntry" Placeholder="Enter course name" />
+
+        <Label Text="Description" />
+        <Editor x:Name="CourseDescriptionEditor" Placeholder="Enter course description" HeightRequest="100" />
+
+        <Label Text="Image Name" />
+        <Entry x:Name="CourseImageNameEntry" Placeholder="Enter image name" />
+
+        <Label Text="Duration (in hours)" />
+        <Entry x:Name="CourseDurationEntry" Placeholder="Enter duration" Keyboard="Numeric" />
+
+        <Label Text="Category" />
+        <Picker x:Name="CourseCategoryPicker" Title="Select a category" />
+
+        <Button Text="Add Course" Clicked="OnAddCourseClicked" />
+    </StackLayout>
+</ContentPage>

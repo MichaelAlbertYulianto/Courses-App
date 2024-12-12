@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Courses_App.Pages"
+             x:Class="Courses_App.Pages.CoursePage"
+             Title="CoursePage">
+    <StackLayout Padding="10">
+        <ListView x:Name="CoursesListView" 
+                  SelectionMode="None"
+                  ItemSelected="OnCourseSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Image Source="{Binding ImageName}" WidthRequest="50" HeightRequest="50" />
+                            <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Medium" LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding Description}" FontSize="Small" TextColor="Gray" LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding Duration}" FontSize="Small" TextColor="Gray" LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                            <CheckBox IsChecked="{Binding IsSelected}" VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Name="AddCourseButton" Text="Add Course" Clicked="OnAddCourseClicked" Margin="5" />
+        <Button x:Name="RefreshListButton" Text="Refresh List" Clicked="OnRefreshList" Margin="5" />
+        <Button x:Name="DeleteSelectedCoursesButton" 
+                Text="Delete Selected Courses" 
+                Clicked="OnDeleteSelectedCourses" 
+                Margin="5" />
+        <Button x:Name="UpdateSelectedCourseButton" Text="Update Selected Course" Clicked="OnUpdateSelectedCourses" Margin="5" />
+    </StackLayout>
+</ContentPage>
