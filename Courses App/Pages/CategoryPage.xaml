@@ -13,12 +13,12 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Spacing="10">
-                                <CheckBox IsChecked="{Binding IsSelected}" VerticalOptions="Center" />
-                                <StackLayout>
-                                    <Label Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="Center" />
-                                    <Label Text="{Binding Description}" VerticalOptions="Center" />
-                                </StackLayout>
+                            <CheckBox IsChecked="{Binding IsSelected}" VerticalOptions="Center" />
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="Center" />
+                                <Label Text="{Binding Description}" VerticalOptions="Center" />
                             </StackLayout>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

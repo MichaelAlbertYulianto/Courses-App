@@ -17,4 +17,8 @@
         <ShellContent Route="CategoryPage" ContentTemplate="{DataTemplate local:CategoryPage}" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Enrollments" Icon="https://www.clipartmax.com/png/middle/312-3128002_black-and-white-library-checkmark-clipart-board-transparent-enrollment-icon.png">
+        <ShellContent Route="EnrollmentPage" ContentTemplate="{DataTemplate local:EnrollmentPage}" />
+    </FlyoutItem>
+
 </Shell>

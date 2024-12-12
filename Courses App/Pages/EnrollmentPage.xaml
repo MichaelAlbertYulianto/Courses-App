@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Courses_App.Pages"
              x:Class="Courses_App.Pages.EnrollmentPage"
              Title="EnrollmentPage">
-    <VerticalStackLayout Padding="10">
+    <StackLayout Padding="10">
         <Label Text="Enrollment Details" FontSize="24" HorizontalOptions="Center" />
-        <CollectionView x:Name="EnrollmentList">
-            <CollectionView.ItemTemplate>
+        <ListView x:Name="EnrollmentListView" HasUnevenRows="True" VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
-                        <Label Text="{Binding EnrollmentId}" />
-                        <Label Text="{Binding InstructorId}" />
-                        <Label Text="{Binding CourseId}" />
-                        <Label Text="{Binding EnrolledAt}" />
-                    </StackLayout>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Spacing="5">
+                            <Label Text="{Binding enrollmentId, StringFormat='Enrollment ID: {0}'}" FontAttributes="Bold" />
+                            <Label Text="{Binding instructorId, StringFormat='Instructor ID: {0}'}" />
+                            <Label Text="{Binding courseId, StringFormat='Course ID: {0}'}" />
+                            <Label Text="{Binding enrolledAt, StringFormat='Enrolled At: {0:MM/dd/yyyy}'}" />
+                        </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-        <Button Text="Refresh" Clicked="OnRefreshClicked" />
-        <Button Text="Update" Clicked="OnUpdateClicked" />
-        <Button Text="Delete" Clicked="OnDeleteClicked" />
-    </VerticalStackLayout>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="Add" Text="Add" Clicked="OnAddClicked" Margin="0,10,0,0"/>
+        <Button x:Name="Refresh" Text="Refresh" Clicked="OnRefreshClicked" Margin="0,10,0,0"/>
+    </StackLayout>
 </ContentPage>
